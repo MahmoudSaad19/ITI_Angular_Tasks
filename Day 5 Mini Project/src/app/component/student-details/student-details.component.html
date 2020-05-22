@@ -1,0 +1,97 @@
+
+<div class="col alert alert-primary" *ngIf="isEditable; else dataBlock">
+    <form [formGroup]="regForm" class="form" (ngSubmit)="edit()" enctype="multipart/form-data" >
+        <div class="col-12 d-flex">
+            <div class="col-6">
+                <input type="file" (change)="pic($event)" accept="image/*" class="d-none" #photo>                      
+             
+                <img src="{{this.imageSrc}}" width="400px" class="m-3">
+                <div class="form-group row justify-content-center">
+                  <input type="button" (click)="photo.click()" value="Upload" class="btn col-5 btn-outline-primary">
+                </div>         
+              </div>
+         <div class="col-6">
+           <!-- name -->
+         <div class="form-group row">
+           <input
+             formControlName="name" value="{{this.std.Name}}"
+             type="text"
+             placeholder="name minimum 6 characters"
+             class="form-control shadow rounded text-center col-12"
+           />
+           <br />
+           <br />
+           <div class="col alert alert-success text-center p-0" *ngIf="nameStatus; else falseName">
+             valid
+           </div>
+           <ng-template #falseName>
+             <div class="col alert alert-danger text-center p-0">
+               not-valid
+             </div>
+           </ng-template>
+         </div>
+         <!-- Age -->
+         <div class="form-group row">
+           <input formControlName="age" type="number" 
+             placeholder="Age 18 - 60 " value="{{this.std.Age}}"
+             class="form-control shadow rounded text-center col-12"  />
+           <br />
+           <br />
+           <div
+             class="col alert alert-dismissible alert-success text-center p-0"
+             *ngIf="ageStatus; else falseBlock"
+           >
+             valid
+           </div>
+           <ng-template #falseBlock>
+             <div class="col alert alert-danger text-center p-0">
+               not-valid
+             </div>
+           </ng-template>
+         </div>
+         <!-- Email-->
+         <div class="form-group row">
+           <input
+             formControlName="email" 
+             type="email" value="{{this.std.Email}}"
+             placeholder="Email example@gmail.com"
+             class="form-control shadow rounded text-center col-12"
+           />
+           <br />
+           <br />
+           <div class="col alert alert-success text-center p-0" *ngIf="emailStatus; else falseBlock">
+             valid
+           </div>
+           <ng-template #falseBlock>
+             <div class="col alert alert-danger text-center p-0">
+               not-valid
+             </div>
+           </ng-template>
+         </div>
+         
+       </div>     
+      </div>         
+         <div class="form-group row justify-content-center">
+          <input type="button" class="btn btn-secondary col-4 btn-lg m-2" value="Cancel" (click)="cancel()" />
+          <input type="submit" class="btn btn-primary col-4 btn-lg m-2" value="Save" [disabled]="!isFormValid" />
+        </div>
+      </form>
+  </div>
+  <ng-template #dataBlock>
+    <div class="col-12 text-center">
+        <div class="col-12 p-0">
+            <img src="{{this.imageSrc}}" class="shadow img-fluid">
+        </div>
+        <div class="col-12 d-block">
+            <h1 class="display-2">{{this.std.Name}}</h1>
+            <h3 class="display-4">{{this.std.Email}}</h3>
+            <h1 class="display-4">{{this.std.Age}}</h1>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+<input type="button" value="Delete" class="btn btn-lg p-2 m-3 col-4  btn-danger" (click)="delete()">
+<input type="button" value="Edit" class="btn btn-lg p-2 m-3 col-4  btn-primary" (click)="update()">
+  </ng-template>
+

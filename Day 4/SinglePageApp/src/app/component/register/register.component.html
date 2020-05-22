@@ -1,0 +1,74 @@
+<style>
+  div.alert{
+    padding: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+</style>
+
+<form [formGroup]="regForm" class="form" (ngSubmit)="success()">
+  <!-- name -->
+  <div class="form-group row">
+    <input
+      formControlName="name"
+      type="text"
+      placeholder="name minimum 8 characters"
+      class="form-control shadow rounded text-center col-12"
+    />
+    <br />
+    <br />
+    <div class="col alert alert-success" *ngIf="nameStatus; else falseBlock">
+      valid
+    </div>
+    <ng-template #falseBlock>
+      <div class="col alert alert-danger">
+        not-valid
+      </div>
+    </ng-template>
+  </div>
+  <!-- Age -->
+  <div class="form-group row">
+    <input
+      formControlName="age"
+      type="number"
+      placeholder="Age 18 - 60 "
+      class="form-control shadow rounded text-center col-12"
+    />
+    <br />
+    <br />
+    <div
+      class="col alert alert-dismissible alert-success"
+      *ngIf="ageStatus; else falseBlock"
+    >
+      valid
+    </div>
+    <ng-template #falseBlock>
+      <div class="col alert alert-danger">
+        not-valid
+      </div>
+    </ng-template>
+  </div>
+  <!-- Email-->
+  <div class="form-group row">
+    <input
+      formControlName="email"
+      type="email"
+      placeholder="Email example@gmail.com"
+      class="form-control shadow rounded text-center col-12"
+    />
+    <br />
+    <br />
+    <div class="col alert alert-success" *ngIf="emailStatus; else falseBlock">
+      valid
+    </div>
+    <ng-template #falseBlock>
+      <div class="col alert alert-danger">
+        not-valid
+      </div>
+    </ng-template>
+  </div>
+
+  <div class="form-group row justify-content-center">
+    <input type="submit" class="btn btn-success col-4 btn-lg" value="Register" />
+  </div>
+</form>

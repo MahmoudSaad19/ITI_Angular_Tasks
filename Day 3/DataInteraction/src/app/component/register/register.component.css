@@ -1,0 +1,50 @@
+h2{
+  color: dodgerblue;
+  border: 1px solid dodgerblue;
+  width: 50%;
+  text-align: center;
+  font-family: consolas;
+  padding: 5px;
+  border-radius: 15px;
+  margin-left:auto ;
+  margin-right: auto;
+  margin-top: 0px;
+}
+
+.form{
+  border: 1px solid lightgray;
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 3px 3px 4px 4px lavender;
+}
+
+.form-control{
+  width: 90%;
+  display: block;
+  margin: 3% auto;
+  padding: 7px;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.btn{
+  width: 50%;
+  border-radius: 10%;
+  background: dodgerblue;
+  color: white;
+  transition: 0.1s;
+  outline: none;
+}
+.btn:hover{
+  cursor: pointer;
+  background-color: #037df6;
+  transform: scaleX(1.01);
+  box-shadow: 2px 2px 3px grey;
+}
+.btn:active{
+  color: gray;
+  background-color: cornflowerblue;
+  border-color: blue;
+}

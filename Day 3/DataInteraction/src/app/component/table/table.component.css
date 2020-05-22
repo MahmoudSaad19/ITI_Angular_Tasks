@@ -1,0 +1,43 @@
+h2{
+  color: orangered;
+  border: 1px solid orangered;
+  width: 50%;
+  text-align: center;
+  font-family: consolas;
+  padding: 5px;
+  border-radius: 15px;
+  margin-left:auto ;
+  margin-right: auto;
+  margin-top: 0px;
+}
+
+table{
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+  box-shadow: 2px 2px 5px 5px rgba(248, 211, 198, 0.692);
+}
+
+
+th{
+  box-shadow: -5px -5px -5px -5px gray ;
+  font-family: 'Segoe UI';
+  font-size: large;
+  color: orangered;
+  width: 50%;
+}
+
+tr{
+  box-shadow: -5px -5px -5px -5px gray ;
+  width: max-content;
+  border-bottom: 1px solid red;
+}
+
+td{
+  box-shadow: -5px -5px -5px -5px gray ;
+  color: dodgerblue;
+  font-size: medium;
+  font-family: cursive;
+  padding-left: 0px ;
+  padding-right: 0px;
+}

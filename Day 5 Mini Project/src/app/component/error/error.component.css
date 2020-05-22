@@ -1,0 +1,8 @@
+div.container{
+    background: url(/assets/angular_errors.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1200px;
+    height: 400px;
+}

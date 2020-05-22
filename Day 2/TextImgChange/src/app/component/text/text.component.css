@@ -1,0 +1,37 @@
+body{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+div{
+    width: 50%;
+}
+#text{
+    width: 350px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    align-self: center;
+    font-size: medium;
+    padding: 3px;
+}
+
+label{
+    color: orangered;
+    background-color: lightskyblue;
+    border-radius: 30px;
+    font-size: x-large;
+    font-family: consolas;
+    align-self: center;
+    text-align: center;
+    padding: 4px;
+}
+
+input:last-child{
+    color: goldenrod;
+    width: 150px;
+    border-radius: 30px;
+    background-color: lavender;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px;
+}

@@ -1,0 +1,9 @@
+input{
+    color: blue;
+    border-radius: 50px;
+    background-color: skyblue;
+    font-size: 35px;
+    cursor: pointer;
+    align-self:top;
+    align-self: start;
+}

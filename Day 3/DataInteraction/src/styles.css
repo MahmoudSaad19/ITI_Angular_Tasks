@@ -1,0 +1,16 @@
+body{
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+.container{
+  width: 99%;
+  padding: 1%;
+  max-width: 100%;
+  display: flex;
+}
+.component{
+  width: 50%;
+  flex:50%;
+  max-width: 50%;
+}

@@ -1,0 +1,30 @@
+<h2> Register </h2>
+
+<div class="form">
+
+    <input class="form-control" [(ngModel)]="inputName" placeholder="Name" type="text">
+    <input class="form-control" [(ngModel)]="inputAge" placeholder="Age" type="number">
+
+    <!-- <div *ngIf="inputAge<18; then trueBlock else elsefalse" >
+    </div>
+    <ng-template #trueBlock>
+        <div *ngIf="inputAge===0; else notvalid" style="background-color: white;">
+            zero not allowed
+        </div>
+    </ng-template>
+    <ng-template #notvalid>
+        <div style="background-color: white;">
+            not valid
+        </div>
+    </ng-template>
+
+    <ng-template #elsefalse>
+        <div style="background-color: white;">
+            Valid
+        </div>
+    </ng-template> -->
+
+    <input type="button" value="Add" class="btn" (click)="addStudent()">
+
+</div>
+

@@ -1,0 +1,8 @@
+<div class="alert alert-light d-flex shadow hover" (click)="details()">
+    <div class="col-3">
+        <img src="{{stdItem.Image}}" class=" img-fluid">
+    </div>
+    <div class="col-9 align-content d-flex">
+        <h3 class=" align-self-center display-4"><a id="std{{stdItem.ID}}" routerLink="{{stdItem.ID}}">{{stdItem.Name}}</a></h3>
+    </div>
+</div>
